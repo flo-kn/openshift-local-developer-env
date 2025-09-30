@@ -123,7 +123,7 @@ Observe the new license:
   ![]()
 
 
-## Other Openshift Dependences
+## Other Openshift Dependencies
 
 
 You might also need
