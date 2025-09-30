@@ -32,12 +32,23 @@ crc config set cpus 8
 crc config set disk-size 45600
 crc config get disk-size
 ```
+
 Start the thing
 ```sh
 # Ensure dependencies are up-to-date
 crc setup
+```
+
+If not already login to your Readhat Developer Account and go to [download page](https://developers.redhat.com/register?intcmp=701f20000012ngPAAQ) and download another pull-secret
+```
+export PATH_TO_PERSONAL_PULL_SECRET=~/Documents/secrets/pull-secret-2.txt
+```
+_(Note: Change `~/Documents/secrets/pull-secret.txt` to wherever your stored yours)_
+
+
+```
 # Point it the downloaded secret that matches your installation binary
-crc start -p ~/Documents/secrets/pull-secret-2.txt
+crc start -p $PATH_TO_PERSONAL_PULL_SECRET
 ```
 
 ```
@@ -80,12 +91,14 @@ oc get pod -l deployment=hellogo
 ```
 crc stop
 crc cleanup
-go to [download page](https://developers.redhat.com/register?intcmp=701f20000012ngPAAQ) and download another pull-secret
+```
+Go to [download page](https://developers.redhat.com/register?intcmp=701f20000012ngPAAQ) and download another pull-secret
+```
 crc start -p ~/Downloads/new-pull-secret.txt
 ```
 Observe the new license:
 
-![](./image/Screenshot%202025-09-22%20at%2015.52.25.png)
+![](./images/Screenshot%202025-09-22%20at%2015.52.25.png)
 
 
 ### Troubleshooting
@@ -102,7 +115,7 @@ Observe the new license:
   RESTART!
   ```sh
   crc stop
-  crc start -p ~/Downloads/pull-secret.txt
+  crc start -p $PATH_TO_PERSONAL_PULL_SECRET
   ```
   
   Restart all the pods that are in crash-loop manually!
