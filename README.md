@@ -12,6 +12,8 @@ Many organisations use [Openshift](https://access.redhat.com/documentation/en-us
 
 ### MacOS (ARM-based)
 
+*Side Note: While the latest M-Series Macbook Pro Notebooks are Power Houses that can easily host heaps of running containers in the local Openshift, be aware that as of today still many Redhat Images do not support ARM-Based Processors.*
+
 First [download](https://developers.redhat.com/content-gateway/rest/mirror/pub/openshift-v4/clients/crc/2.31.0) the install file and follow the [installation steps](https://www.redhat.com/sysadmin/install-openshift-local).
 
 
@@ -39,9 +41,9 @@ Start the thing
 crc setup
 ```
 
-If not already login to your Readhat Developer Account and go to [download page](https://developers.redhat.com/register?intcmp=701f20000012ngPAAQ) and download another pull-secret
+If not already login to your Redhat Developer Account and go to [download page](https://developers.redhat.com/register?intcmp=701f20000012ngPAAQ) and download another pull-secret.
 ```
-export PATH_TO_PERSONAL_PULL_SECRET=~/Documents/secrets/pull-secret-2.txt
+export PATH_TO_PERSONAL_PULL_SECRET=~/path/to/pull-secret.txt
 ```
 _(Note: Change `~/Documents/secrets/pull-secret.txt` to wherever your stored yours)_
 
@@ -62,7 +64,7 @@ crc stop
 crc cleanup
 ```
 
-Use it! Create a demo app using the [sample provided by redhat](https://www.redhat.com/sysadmin/build-deploy-application-openshift).
+Use it! Create a demo app using the [sample provided by Redhat](https://www.redhat.com/sysadmin/build-deploy-application-openshift).
 
 
 ```sh
@@ -127,7 +129,7 @@ Observe the new license:
 
 
 You might also need
-- https://docs.openshift.com/container-platform/4.10/security/cert_manager_operator/cert-manager-operator-install.html
+- [cert-manager-operator](https://docs.openshift.com/container-platform/4.10/security/cert_manager_operator/cert-manager-operator-install.html)
 
 
 ## Use it
@@ -135,4 +137,4 @@ You might also need
 ```
 brew install openshift-cli  
 ```
-Details in [medium - install openshift cli using brew](https://ksummersill.medium.com/install-openshift-cli-using-brew-for-macos-and-connect-to-k8s-cluster-7f8efff0e5e)
+Details in the [medium Blog Post - install openshift cli using brew](https://ksummersill.medium.com/install-openshift-cli-using-brew-for-macos-and-connect-to-k8s-cluster-7f8efff0e5e)
