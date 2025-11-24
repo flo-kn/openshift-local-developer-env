@@ -41,7 +41,7 @@ Start the thing
 crc setup
 ```
 
-If not already login to your Redhat Developer Account and go to [download page](https://developers.redhat.com/register?intcmp=701f20000012ngPAAQ) and download another pull-secret.
+If not already login to your Redhat Developer Account and go to [download page](https://console.redhat.com/openshift/create/local) and download another pull-secret.
 ```
 export PATH_TO_PERSONAL_PULL_SECRET=~/path/to/pull-secret.txt
 ```
