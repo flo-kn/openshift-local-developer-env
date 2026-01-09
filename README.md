@@ -1,5 +1,7 @@
 # openshift-local-developer-env
 
+![Static Badge](https://img.shields.io/badge/knip--builds-official-brightgreen%3Fstyle%3Dflat)
+
 I tried out the Local Development from Redhat Openshift. This Github Repo helps developers to setup an Openshift Environment on their local workstation.
 
 ## Openshift Installation Guide
